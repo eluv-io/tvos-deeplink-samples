@@ -43,7 +43,6 @@ This sample uses a demo backend api to retrieve a signed entitlement. In product
 ## Customization for Dev
 * Change these values inside of [ContentView.swift](EluvioDeepLinkSample/EluvioDeepLinkSample/ContentView.swift) to test your own marketplace's nft:
 ```
-    let APPSTOREURL = "https://apps.apple.com/in/app/eluvio-media-wallet/id1591550411"
     let TENANT_ID = "iten34Y7Tzso2mRqhzZ6yJDZs2Sqf8L"
     let MARKETPLACE = "iq__D3N77Nw1ATwZvasBNnjAQWeVLWV"
     let SKU = "5MmuT4t6RoJtrT9h1yTnos"
