@@ -15,24 +15,30 @@ struct Linker {
     func createBundleLink(
         contract:String,
         marketplace: String,
-        sku: String
+        sku: String,
+        authToken: String = ""
     ) -> String {
         return urlScheme + "items" + "?" + "contract=\(contract)" + "&marketplace=\(marketplace)"
-        + "&sku=\(sku)" + "&back_link=\(backlink)"
+        + "&sku=\(sku)" + (authToken.isEmpty ? "" : "&authorization=\(authToken)") + "&back_link=\(backlink)"
     }
     
     func createPlayLink(
-        contract:String
+        contract:String,
+        marketplace: String,
+        sku: String,
+        authToken: String = ""
     ) -> String {
-        return urlScheme + "play" + "?" + "contract=\(contract)" + "&back_link=\(backlink)"
+        return urlScheme + "play" + "?" + "contract=\(contract)" + "&marketplace=\(marketplace)"
+        + "&sku=\(sku)" + (authToken.isEmpty ? "" : "&authorization=\(authToken)") + "&back_link=\(backlink)"
     }
     
     func createMintLink(
         marketplace: String,
         sku: String,
-        entitlement: String = ""
+        entitlement: String = "",
+        authToken: String = ""
     ) -> String {
-        return urlScheme + "mint" + "?" + "marketplace=\(marketplace)" + "&sku=\(sku)" + "&entitlement=\(entitlement)" + "&back_link=\(backlink)"
+        return urlScheme + "mint" + "?" + "marketplace=\(marketplace)" + "&sku=\(sku)" + "&entitlement=\(entitlement)" + (authToken.isEmpty ? "" : "&authorization=\(authToken)") + "&back_link=\(backlink)"
     }
     
     //Hardcoded for now

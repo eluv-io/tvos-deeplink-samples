@@ -11,7 +11,8 @@ let APPSTOREURL = "https://apps.apple.com/in/app/eluvio-media-wallet/id159155041
 let TENANT_ID = "iten34Y7Tzso2mRqhzZ6yJDZs2Sqf8L"
 let MARKETPLACE = "iq__D3N77Nw1ATwZvasBNnjAQWeVLWV"
 let SKU = "5MmuT4t6RoJtrT9h1yTnos"
-let CONTRACT = "0xb77dd8be37c6c8a6da8feb87bebdb86efaff74f4"
+//Optional (will use the marketplace and sku to find the contract if not provided (for the bundle)
+let CONTRACT = ""
 let FABRIC_CONFIG_URL = "https://main.net955305.contentfabric.io/config"
 let CONTENT_WIDTH : CGFloat = 1200
 
@@ -51,28 +52,6 @@ struct ContentView: View {
                     .padding(.bottom, 40)
                 
                 Button {
-                    let urlString = linker.createPlayLink(contract: CONTRACT)
-                    if let url = URL(string: urlString) {
-                        openLink(url:url)
-                    }
-                } label: {
-                    Text("Play Media")
-                    .frame(width:CONTENT_WIDTH)
-                }
-                
-                Button {
-                    let urlString = linker.createBundleLink(contract: CONTRACT, marketplace: MARKETPLACE, sku: SKU)
-                    if let url = URL(string: urlString) {
-                        openLink(url:url)
-                    }
-
-                } label: {
-                    Text("Launch Bundle")
-                    .frame(width:CONTENT_WIDTH)
-                }
-                
-                
-                Button {
                     if let token = login.loginInfo?.token {
                         let purchaseId = UUID().uuidString
                         Task {
@@ -80,7 +59,7 @@ struct ContentView: View {
                                 if let entitlementJson = try await fabric.authClient?.createEntitlement(tenantId: TENANT_ID, marketplace:MARKETPLACE, sku: SKU, purchaseId: purchaseId, authToken: token) {
                                     if let string = entitlementJson.rawString() {
                                         debugPrint("Entitlement ", string)
-                                        let urlString = linker.createMintLink(marketplace: MARKETPLACE, sku: SKU, entitlement: string)
+                                        let urlString = linker.createMintLink(marketplace: MARKETPLACE, sku: SKU, entitlement: string, authToken: token)
                                         if let url = URL(string: urlString) {
                                             openLink(url:url)
                                         }
@@ -96,7 +75,41 @@ struct ContentView: View {
                         showingAlert = true
                     }
                 } label: {
-                    Text("Mint Bundle with Entitlement")
+                    Text("Mint Bundle With Entitlement")
+                    .frame(width:CONTENT_WIDTH)
+                }
+                
+                // LAUNCH BUNDLE
+                
+                Button {
+                    if let token = login.loginInfo?.token {
+                        let urlString = linker.createBundleLink(contract: CONTRACT, marketplace: MARKETPLACE, sku: SKU, authToken: token)
+                        if let url = URL(string: urlString) {
+                            openLink(url:url)
+                        }
+                    }else {
+                        alertMessage = "Please login first"
+                        showingAlert = true
+                    }
+
+                } label: {
+                    Text("Launch Bundle")
+                    .frame(width:CONTENT_WIDTH)
+                }
+                
+                // LAUNCH BUNDLE AND PLAY FIRST FEATURED MEDIA
+                Button {
+                    if let token = login.loginInfo?.token {
+                        let urlString = linker.createPlayLink(contract: CONTRACT, marketplace: MARKETPLACE, sku: SKU, authToken: token)
+                        if let url = URL(string: urlString) {
+                            openLink(url:url)
+                        }
+                    }else {
+                        alertMessage = "Please login first"
+                        showingAlert = true
+                    }
+                } label: {
+                    Text("Play Bundle Featured Media")
                     .frame(width:CONTENT_WIDTH)
                 }
                 
