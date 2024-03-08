@@ -19,7 +19,6 @@
 		B0B5CB432B9A49EE0087BC6A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B0B5CB422B9A49EE0087BC6A /* SwiftyJSON */; };
 		B0B5CB452B9A4A290087BC6A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CB442B9A4A290087BC6A /* Utils.swift */; };
 		B0B5CB482B9A51F00087BC6A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0B5CB472B9A51F00087BC6A /* Alamofire */; };
-		B0B5CB4A2B9A51F00087BC6A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B0B5CB492B9A51F00087BC6A /* AlamofireDynamic */; };
 		B0B5CB4C2B9A55A80087BC6A /* Fabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CB4B2B9A55A80087BC6A /* Fabric.swift */; };
 		B0B5CB4F2B9B7A180087BC6A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B0B5CB4D2B9B7A180087BC6A /* README.md */; };
 		B0B5CB502B9B7A180087BC6A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B0B5CB4E2B9B7A180087BC6A /* LICENSE */; };
@@ -49,7 +48,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B5CB432B9A49EE0087BC6A /* SwiftyJSON in Frameworks */,
-				B0B5CB4A2B9A51F00087BC6A /* AlamofireDynamic in Frameworks */,
 				B0B5CB482B9A51F00087BC6A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,7 +119,6 @@
 			packageProductDependencies = (
 				B0B5CB422B9A49EE0087BC6A /* SwiftyJSON */,
 				B0B5CB472B9A51F00087BC6A /* Alamofire */,
-				B0B5CB492B9A51F00087BC6A /* AlamofireDynamic */,
 			);
 			productName = EluvioDeepLinkSample;
 			productReference = B08CB4F52B7BC25000E04C0D /* EluvioDeepLinkSample.app */;
@@ -325,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EluvioDeepLinkSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 2KH8KC3MMX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EluvioDeepLinkSample/Info.plist;
@@ -352,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EluvioDeepLinkSample/Preview Content\"";
+				DEVELOPMENT_TEAM = 2KH8KC3MMX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EluvioDeepLinkSample/Info.plist;
@@ -423,11 +422,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B0B5CB462B9A51F00087BC6A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		B0B5CB492B9A51F00087BC6A /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B0B5CB462B9A51F00087BC6A /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
