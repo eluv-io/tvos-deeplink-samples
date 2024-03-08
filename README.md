@@ -1,5 +1,5 @@
 # Eluvio Deeplink sample for AppleTV
-This sample demonstrates how to deeplink into the Eluvio Media Wallet app on AppleTV. Note currently only works with Beta versions of Eluvio Media Wallet 1.0.6+.
+This sample demonstrates how to deeplink into the Eluvio Media Wallet app on AppleTV. Note currently only works with Beta versions of Eluvio Media Wallet 1.0.6 build (154) or greater.
 
 ## Currently supported URIs
 * The Eluvio Media Wallet has defined a deep link scheme elvwallet:// when installed
