@@ -35,36 +35,14 @@ struct Linker {
     func createMintLink(
         marketplace: String,
         sku: String,
-        entitlement: String = "",
+        entitlement: String,
+        signature: String,
         authToken: String = ""
     ) -> String {
-        return urlScheme + "mint" + "?" + "marketplace=\(marketplace)" + "&sku=\(sku)" + "&entitlement=\(entitlement)" + (authToken.isEmpty ? "" : "&authorization=\(authToken)") + "&back_link=\(backlink)"
-    }
-    
-    //Hardcoded for now
-    func createDemoEntitlement(purchaseId:String = "") -> String {
-        let item = EntitlementItem(sku:"5teHdjLfYtPuL3CRGKLymd", amount: 1)
+        //Combine signature and entitlement to pass into the deep link
+        let ent = "{\"entitlement\":\(entitlement), \"signature\":\"\(signature)\"}"
         
-        var _purchaseId = purchaseId
-        if _purchaseId.isEmpty {
-            _purchaseId = UUID().uuidString
-        }
-        
-        let entitlement = EntitlementModel(
-            marketplace_id: "iq__2YZajc8kZwzJGZi51HJB7TAKdio2",
-            items: [item],
-            nonce: UUID().uuidString,
-            purchase_id: _purchaseId
-        )
-        
-        do {
-            let jsonData = try JSONEncoder().encode(entitlement)
-            let jsonString = String(data: jsonData, encoding: .utf8)!
-            return jsonString
-        }catch{
-            print("Could not encode entitlement ", error)
-            return ""
-        }
+        return urlScheme + "mint" + "?" + "marketplace=\(marketplace)" + "&sku=\(sku)" + "&entitlement=\(ent)" + (authToken.isEmpty ? "" : "&authorization=\(authToken)") + "&back_link=\(backlink)"
     }
 
 }

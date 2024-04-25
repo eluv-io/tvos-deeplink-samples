@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B077B8D92B966D58009E3B6B /* Linker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077B8D82B966D58009E3B6B /* Linker.swift */; };
-		B077B8DB2B966FAE009E3B6B /* Entitlement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B077B8DA2B966FAE009E3B6B /* Entitlement.swift */; };
 		B08CB4F92B7BC25000E04C0D /* EluvioDeepLinkSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CB4F82B7BC25000E04C0D /* EluvioDeepLinkSampleApp.swift */; };
 		B08CB4FB2B7BC25000E04C0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CB4FA2B7BC25000E04C0D /* ContentView.swift */; };
 		B08CB4FD2B7BC25100E04C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08CB4FC2B7BC25100E04C0D /* Assets.xcassets */; };
 		B08CB5002B7BC25100E04C0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08CB4FF2B7BC25100E04C0D /* Preview Assets.xcassets */; };
 		B0B5CB3C2B9A3D8F0087BC6A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CB3B2B9A3D8F0087BC6A /* Header.swift */; };
-		B0B5CB3E2B9A458E0087BC6A /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CB3D2B9A458E0087BC6A /* LoginManager.swift */; };
-		B0B5CB402B9A48EE0087BC6A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CB3F2B9A48EE0087BC6A /* SignInView.swift */; };
 		B0B5CB432B9A49EE0087BC6A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = B0B5CB422B9A49EE0087BC6A /* SwiftyJSON */; };
 		B0B5CB452B9A4A290087BC6A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5CB442B9A4A290087BC6A /* Utils.swift */; };
 		B0B5CB482B9A51F00087BC6A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0B5CB472B9A51F00087BC6A /* Alamofire */; };
@@ -26,7 +23,6 @@
 
 /* Begin PBXFileReference section */
 		B077B8D82B966D58009E3B6B /* Linker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linker.swift; sourceTree = "<group>"; };
-		B077B8DA2B966FAE009E3B6B /* Entitlement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlement.swift; sourceTree = "<group>"; };
 		B08CB4F52B7BC25000E04C0D /* EluvioDeepLinkSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EluvioDeepLinkSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08CB4F82B7BC25000E04C0D /* EluvioDeepLinkSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EluvioDeepLinkSampleApp.swift; sourceTree = "<group>"; };
 		B08CB4FA2B7BC25000E04C0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,8 +30,6 @@
 		B08CB4FF2B7BC25100E04C0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0B5CB3A2B99183A0087BC6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B0B5CB3B2B9A3D8F0087BC6A /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		B0B5CB3D2B9A458E0087BC6A /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
-		B0B5CB3F2B9A48EE0087BC6A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		B0B5CB442B9A4A290087BC6A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B0B5CB4B2B9A55A80087BC6A /* Fabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fabric.swift; sourceTree = "<group>"; };
 		B0B5CB4D2B9B7A180087BC6A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -81,10 +75,7 @@
 				B08CB4F82B7BC25000E04C0D /* EluvioDeepLinkSampleApp.swift */,
 				B08CB4FA2B7BC25000E04C0D /* ContentView.swift */,
 				B077B8D82B966D58009E3B6B /* Linker.swift */,
-				B077B8DA2B966FAE009E3B6B /* Entitlement.swift */,
 				B0B5CB3B2B9A3D8F0087BC6A /* Header.swift */,
-				B0B5CB3D2B9A458E0087BC6A /* LoginManager.swift */,
-				B0B5CB3F2B9A48EE0087BC6A /* SignInView.swift */,
 				B0B5CB4B2B9A55A80087BC6A /* Fabric.swift */,
 				B08CB4FC2B7BC25100E04C0D /* Assets.xcassets */,
 				B08CB4FE2B7BC25100E04C0D /* Preview Content */,
@@ -181,13 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B5CB3C2B9A3D8F0087BC6A /* Header.swift in Sources */,
-				B0B5CB402B9A48EE0087BC6A /* SignInView.swift in Sources */,
 				B08CB4FB2B7BC25000E04C0D /* ContentView.swift in Sources */,
-				B077B8DB2B966FAE009E3B6B /* Entitlement.swift in Sources */,
 				B0B5CB4C2B9A55A80087BC6A /* Fabric.swift in Sources */,
 				B077B8D92B966D58009E3B6B /* Linker.swift in Sources */,
 				B08CB4F92B7BC25000E04C0D /* EluvioDeepLinkSampleApp.swift in Sources */,
-				B0B5CB3E2B9A458E0087BC6A /* LoginManager.swift in Sources */,
 				B0B5CB452B9A4A290087BC6A /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
