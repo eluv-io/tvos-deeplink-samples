@@ -1,5 +1,5 @@
 # Eluvio Deeplink sample for AppleTV
-This sample demonstrates how to deeplink into the Eluvio Media Wallet app on AppleTV. Note currently only works with Beta versions of Eluvio Media Wallet 1.0.6 build (154) or greater.
+This sample demonstrates how to deeplink into the Eluvio Media Wallet app on AppleTV. Note currently only works with Eluvio Media Wallet 1.0.7 or greater.
 
 ## Currently supported URIs
 * The Eluvio Media Wallet has defined a deep link scheme elvwallet:// when installed
@@ -37,23 +37,24 @@ eg.
   "signature": "mje_xxxx"
 }
 ```
-This sample uses a demo backend api to retrieve a signed entitlement. In production, it is the responsibility of the implementation app to generate and sign the entitlement with the correct purchase information using the tenant (retailer) key
 
 
 ## Customization for Dev
-* Change these values inside of [ContentView.swift](EluvioDeepLinkSample/EluvioDeepLinkSample/ContentView.swift) to test your own marketplace's nft:
+* Change these values inside of [ContentView.swift](EluvioDeepLinkSample/EluvioDeepLinkSample/ContentView.swift)
 ```
-    let TENANT_ID = "iten34Y7Tzso2mRqhzZ6yJDZs2Sqf8L"
-    let MARKETPLACE = "iq__D3N77Nw1ATwZvasBNnjAQWeVLWV"
-    let SKU = "5MmuT4t6RoJtrT9h1yTnos"
+    let MARKETPLACE = "iq__"
+    let SKU = ""
+    let JWT_ACCESS_TOKEN = "ey__"
+    let ENTITLEMENT = """
+    {"tenant_id":"", ...}
+    """
+    let ENTITLEMENT_SIGNATURE = "mje__"
 ```
 
-* Use an alternate login service provider change this function's url:
-```
-func CreateLoginUrl(marketplaceId: String) -> String {
-    return "https://wallet.contentfabric.io/login?mid=\(marketplaceId)&useOry=true&action=login&mode=login&response=code&source=code"
-}
-```
+1. Use [this sample](https://appsvc.svc.eluv.io/sample-purchase) to generate dummy values for testing.  
+2. Read about [Media Wallet Retailer Integration](https://hub.doc.eluv.io/mediawallet/retailer_integration/) to get these values from your own system.
+Note: "purchase_id" is unique per tenant, not user, so while testing make sure not to use simple purchase_ids like "1" that may have been used by others before you, try to make them unique to yourself.
+
 
 ## Media Wallet App Store
 * If you would like to link to the Media Wallet on the App store (once deep links are supported), use this url: https://apps.apple.com/in/app/eluvio-media-wallet/id1591550411
