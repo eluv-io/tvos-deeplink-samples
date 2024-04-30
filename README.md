@@ -54,7 +54,7 @@ eg.
 1. Use [this sample](https://appsvc.svc.eluv.io/sample-purchase) to generate dummy values for testing.  
 2. Read about [Media Wallet Retailer Integration](https://hub.doc.eluv.io/mediawallet/retailer_integration/) to get these values from your own system.
 Note: "purchase_id" is unique per tenant, not user, so while testing make sure not to use simple purchase_ids like "1" that may have been used by others before you, try to make them unique to yourself.
-
+ 
 
 ## Media Wallet App Store
 * If you would like to link to the Media Wallet on the App store (once deep links are supported), use this url: https://apps.apple.com/in/app/eluvio-media-wallet/id1591550411
