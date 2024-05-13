@@ -12,7 +12,7 @@ import SwiftUI
 
 let MARKETPLACE = "iq__D3N77Nw1ATwZvasBNnjAQWeVLWV"
 let SKU = "5MmuT4t6RoJtrT9h1yTnos"
-let JWT_ACCESS_TOKEN = ""
+let JWT_ACCESS_TOKEN = "ey..."
 let ENTITLEMENT = """
 {"tenant_id":"iten34Y7Tzso2mRqhzZ6yJDZs2Sqf8L","marketplace_id":"iq__D3N77Nw1ATwZvasBNnjAQWeVLWV","items":[{"sku":"5MmuT4t6RoJtrT9h1yTnos","amount":1}],"user":"3a9b5885-862c-41a5-85fa-c78fc61551a1","purchase_id":"12"}
 """
